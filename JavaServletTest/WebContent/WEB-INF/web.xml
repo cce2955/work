@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name>JavaServletTest</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+ 	
+ 	
+ 	<!-- Initial servlet, can safely ignore this one -->
+   <servlet>
+    <servlet-name>DynamicClassServletTest</servlet-name>
+    <servlet-class>DynamicClassServletTest</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DynamicClassServletTest</servlet-name>
+    <url-pattern>DynaClass.html</url-pattern>
+  </servlet-mapping>
+  
+  <!--  Servlet that connects to car database and prints out from toyota table -->
+  <servlet>
+    <servlet-name>databaseConnector</servlet-name>
+    <servlet-class>databaseConnector</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>databaseConnector</servlet-name>
+    <url-pattern>DatabaseCon.html</url-pattern>
+  </servlet-mapping>
+
+  <!-- Servlet that connects to database and helps with logging in -->
+  <servlet>
+  <servlet-name>Login</servlet-name>
+  <servlet-class>loginAction</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>Login</servlet-name>
+  	<url-pattern>login</url-pattern>
+  </servlet-mapping>
+  
+  <!--  servlet that calculates a factorial -->
+  <servlet>
+  <servlet-name>Factorial</servlet-name>
+  <servlet-class>factorialservlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>Factorial</servlet-name>
+  	<url-pattern>factsum</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
