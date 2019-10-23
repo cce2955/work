@@ -41,6 +41,9 @@
   	<servlet-name>Login</servlet-name>
   	<url-pattern>login</url-pattern>
   </servlet-mapping>
+  <session-config>
+  	<session-timeout>20</session-timeout>
+  </session-config>
   
   <!--  servlet that calculates a factorial -->
   <servlet>
